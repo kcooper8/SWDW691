@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Style Guide</title>
+
+    <!-- Site theme -->
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+
+    <!--  Place Custom Styles Below -->
+    <style>
+        body {
+            font-family: "Calibri";
+            color: black;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: "Times New Roman";
+        }
+
+        h2 {
+            font-size: 20px;
+            font-family: "Times New Roman";
+        }
+
+        h3 {
+            font-size: 16px;
+            font-family: "Times New Roman";
+        }
+
+        .button {
+            padding: 15px 25px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: "Calibri";
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #023303;
+            border: none;
+            border-radius: 15px;
+            }
+
+        .button:hover {background-color: #7ef382}
+
+        .button:active {
+            background-color: #eed42e;
+        }
+
+        .inputLabel {
+            font-size: 14px;
+            font-weight: bold;
+            font-family: "Calibri";
+        }
+
+        input.inputField {
+            padding: 5px;
+            border: 1px solid #023303;
+        }
+
+        /* Customize the label (the checkboxLabel) */
+        .checkboxLabel {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: "Calibri";
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+        /* Hide the browser's default checkbox */
+        .checkboxLabel input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+}
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eed42e;
+            }
+
+        /* On mouse-over, add a grey background color */
+        .checkboxLabel:hover input ~ .checkmark {
+            background-color: #7ef382;
+            }
+
+        /* When the checkbox is checked, add a blue background */
+        .checkboxLabel input:checked ~ .checkmark {
+            background-color: #023303;
+            }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            }
+
+        /* Show the checkmark when checked */
+        .checkboxLabel input:checked ~ .checkmark:after {
+            display: block;
+            }
+
+        /* Style the checkmark/indicator */
+        .checkboxLabel .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid #eed42e;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            }
+
+        /* The radioLabel */
+        .radioLabel {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: "Calibri";
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default radio button */
+            .radioLabel input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* Create a custom radio button */
+        .selector {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #ccface;
+            border-radius: 50%;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .radioLabel:hover input ~ .selector {
+            background-color: #7ef382;
+        }
+
+        /* When the radio button is checked, add a blue background */
+        .radioLabel input:checked ~ .selector {
+            background-color: #023303;
+        }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .selector:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        .radioLabel input:checked ~ .selector:after {
+            display: block;
+        }
+
+        /* Style the indicator (dot/circle) */
+        .radioLabel .selector:after {
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #eed42e;
+        }
+
+
+        div.box {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            margin: 0 10px 0 10px;
+        }
+
+        #primary1 {
+            background-color: #1B6880;
+        }
+
+        #primary2 {
+            background-color: #278C68;
+        }
+
+        #primary3 {
+            background-color: #023303;
+        }
+
+        #primary4 {
+            background-color: #6F8C27;
+
+        }
+
+        #primary5 {
+            background-color: #eed42e;
+
+        }
+
+        .warning {
+            background-color: #fd7200;
+            font-family: "Calibri";
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .danger {
+            background-color: #ff2600;
+            font-family: "Calibri";
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .success {
+            background-color: #00ff00;
+            font-family: "Calibri";
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        svg.svg-inline--fa {
+            color: white;
+        }
+
+        .spacer {
+            margin-top: 25px;
+        }
+
+        #footer {
+            border-top: 1px solid #dddddd;
+            margin-top: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+	<!-- Include script for font awesome icon library -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+    <a name="Top"></a>
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#">
+                    <span class="navbar-brand">
+                        <i class="fas fa-home"></i>My Interface Style Guide</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-3">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="#font">Font</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#colorTheme">Color Theme</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#headings">Headings</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#buttons">Buttons</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#formElements">Form Elements</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#messages">Messages</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <!-- About -->
+            <div>
+                <div class="page-header">
+                    <h1>
+                        <a name="about"></a>My Styles</h1>
+                </div>
+                <p>This page contains specific style guide information for my front end interface.</p>
+            </div>
+            <!-- End About -->
+
+            <!-- Fonts -->
+            <div>
+                <div class="page-header">
+                    <h1>
+                        <a name="fonts"></a>Font</h1>
+                </div>
+                <p>My application utilizes the "Calibri" font-family with black text for the body and the "Times New Roman" font-family for the headings.</p>
+            </div>
+            <div class="spacer">
+                <a href="#Top">Back to Top</a>
+            </div>
+            <!-- End Fonts -->
+
+            <!-- Color Theme -->
+            <div>
+                <div class="page-header">
+                    <h1>
+                        <a name="colorTheme"></a>Color Theme</h1>
+                </div>
+                <p>My application incorporates the below color scheme in its interface.</p>
+                <div class="box" id="primary1"></div>
+                <div class="box" id="primary2"></div>
+                <div class="box" id="primary3"></div>
+                <div class="box" id="primary4"></div>
+                <div class="box" id="primary5"></div>
+            </div>
+            <div class="spacer">
+                <a href="#Top">Back to Top</a>
+            </div>
+            <!-- End Color Theme -->
+
+            <!-- Headings -->
+            <div>
+                <div class="page-header">
+                    <h1>
+                        <a name="headings"></a>Headings</h1>
+                </div>
+                <p>The below font sizes and styles are used in the application for various content headings.</p>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+            </div>
+            <div class="spacer">
+                <a href="#Top">Back to Top</a>
+            </div>
+            <!-- End Headings -->
+
+            <!-- Buttons -->
+            <div>
+                <div class="page-header">
+                    <h1>
+                        <a name="buttons"></a>Buttons</h1>
+                </div>
+                <p>The application will feature buttons that contain the below color and shape:</p>
+                <button class="button">My Button</button>
+            </div>
+            <div class="spacer">
+                <a href="#Top">Back to Top</a>
+            </div>
+            <!-- End Buttons -->
+
+            <!-- Form Elements -->
+            <div>
+                <div class="page-header">
+                    <h1>
+                        <a name="formElements"></a>Form Elements</h1>
+                </div>
+                <p>For the varous forms that the application will contain, it will contain input fields and labels with the below styling:</p>
+                <form>
+                    <label for="name" class="inputLabel">Name</label>
+                    <input type="input" id="name" class="inputField" value="">
+                </form>
+                <p>Checkboxes will use the following style:</p>
+                <label class="checkboxLabel">One
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="checkboxLabel">Two
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="checkboxLabel">Three
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="checkboxLabel">Four
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                <p>Radio Buttons will use the following style</p>
+                <label class="radioLabel">One
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="selector"></span>
+                  </label>
+                  <label class="radioLabel">Two
+                    <input type="radio" name="radio">
+                    <span class="selector"></span>
+                  </label>
+                  <label class="radioLabel">Three
+                    <input type="radio" name="radio">
+                    <span class="selector"></span>
+                  </label>
+                  <label class="radioLabel">Four
+                    <input type="radio" name="radio">
+                    <span class="selector"></span>
+                  </label>
+                <form>
+
+                </form>
+            </div>
+            <div class="spacer">
+                <a href="#Top">Back to Top</a>
+            </div>
+            <!-- End Form Elements -->
+
+            <!-- User Messages -->
+            <div>
+                <div class="page-header">
+                    <h1>
+                        <a name="messages"></a>Messages</h1>
+                </div>
+                <p>For various completed tasks, application notifications will be presented to the user based.  The following contextual messages will be used.</p>
+                <p class="warning">Warning!</p>
+                <p class="danger">Danger!</p>
+                <p class="success">Success!</p>
+            </div>
+            <div class="spacer">
+                <a href="#Top">Back to Top</a>
+            </div>
+            <!-- End User Messages -->
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <p class="text-muted">Copyright My Style Guide</p>
+        </div>
+    </div>
+</body>
+
+</html>
